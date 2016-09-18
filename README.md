@@ -22,15 +22,11 @@ Maker Faire is in 2 weeks, so that won't work.
 
 ###Make replacement motor mounts!
 
-Luckily Parallax generously supplies files for all the parts in the ELEV-8!
-
 I have a laser cutter, and converting bits into flat plastic shapes is exactly what laser cutters do best! Whoo hoo, I'll have my motormounts in no time!
 
-###Original file
+###[Original SolidWorks file](721-80304.SLDPRT)
 
-This is the SolidWorks model...
-
-[721-80304.SLDPRT](721-80304.SLDPRT)
+Luckily Parallax generously supplies files for all the parts in the ELEV-8!
 
 But SolidWorks is crazy expensive, so instead I imported the part into...
 
