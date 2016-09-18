@@ -13,12 +13,11 @@ The motormounts were smashed so I checked if I could...
 
 ![721-80304.png](721-80304.png)
 
-Parallax sells exact replacement part for only $3 each. They are made from 0.093 inches thick black acetal.
+Parallax sells the exact replacement part. They are made from 0.093 inches thick black acetal. They cost a reasonable for $3 each. 
 
-Of course it is Friday night, so even 
-if with an overnight shipping upgrade, I'd be grounded at least for the next 5 days. 
+Of course it is Friday night, so even if with an overnight shipping upgrade, I'd be grounded at least for the next 5 days. 
 
-Maker Faire is in 2 weeks, so that won't work. 
+Maker Faire is 2 weeks away and there is (obviously) at least one crash-inducing problem to work out, so that wouldn't work. 
 
 ###Make replacement motor mounts!
 
@@ -26,9 +25,9 @@ I have a laser cutter, and converting bits into flat plastic shapes is exactly w
 
 ###[Original SolidWorks file](721-80304.SLDPRT)
 
-Luckily Parallax generously supplies files for all the parts in the ELEV-8!
+Parallax generously supplies files for all the parts in the ELEV-8!
 
-But SolidWorks is crazy expensive, so instead I imported the part into...
+But SolidWorks is [way too fancy](https://www.cati.com/blog/2015/04/how-much-does-solidworks-cost/) for me, so instead I import the part into...
 
 ###[OnShape](https://www.onshape.com/)
 
@@ -54,7 +53,6 @@ Unfortunately my laser cutter does not speak DXF, but I can import the DXF into.
 
 Sadly, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error, so no joy on this path.
 
-
 This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things done use
 use serious CAD workstations running serious tools like...
 
@@ -70,15 +68,15 @@ http://a360.co/2clur11
 
 There are my motomounts again!
 
-I converted a face to a sketch (to 2D-ify it) and again exported the sketch as a DXF...
+I converted the face to a sketch (to 2D-ify it) and again exported the sketch as a DXF...
 
 [721-80304 - Face F360.dxf](721-80304 - Face F360.dxf)
 
-...which again seems to make Inkscape vomit bits in the same way.
+...which again seemed to make Inkscape vomit bits in the same way.
 
-Hmmm... getting an SVG to send to the laser cutter is turning out to be a lot of work!
+Hmmm... getting an SVG to send to the laser cutter is turning out to be a lot of hassle! We need some latteral thinking here!
 
-Thank goodness I also have a very handy...
+While pondering my move, I notice out of the corner of my eye the very handy...
 
 ###[Othermill PCB cutter](https://othermachine.co/)
 
@@ -87,17 +85,19 @@ be exactly the same shape as a motormount... Hmmm... A hack to be sure, but it s
 
 Sadly the newest version of the Othermill software can not directly import a DXF file (maybe someday Othermill people? Please?).
 
-Luckily, I definitely can import DXF files into...
+Luckily, I know from experience that I can usually import DXF files into...
 
 ###[DipTrace PCB layout software](http://www.diptrace.com/)
 
-...which happy imported the DXF with ease! I specified to import the "visible" layer from the DXF into the "Board Outline" layer of the 
+...which happy complied! I specified to import the "visible" layer from the DXF into the "Board Outline" layer of the 
 board and ended up with a motormount shaped board!....
 
 ![DipTrace Outline.PNG](DipTrace Outline.PNG)
 [Motormount Board Outline with drill hit holes.dip](Motormount Board Outline with drill hit holes.dip)
 
-Those are the boards I've been looking for! I quickly exported the board outline to a gerber file...
+Those are the boards I've been looking for! 
+
+I quickly exported the board outline to a gerber file...
 
 ![gerber.png](gerber.png)
 
@@ -112,13 +112,13 @@ Those are the boards I've been looking for! I quickly exported the board outline
 Hey! I have a gerber and I want a board, so I the rest is just ceremony- right?
 
 Turns out that Otherplan can not even load my gerber file! It [has not implemented the gerber "G85" command](https://othermachine.co/support/pcb/troubleshooting/) 
-which is used to describe internal cutouts. Boo Hoo (maybe someday OtherMill people? Please?).
+which is used to describe internal board cutouts. Boo Hoo (maybe someday OtherMill people? Please?).
 
 Luckily those internal cutouts happen to be exactly round circles so if can convert the cutouts to...
 
 ###Drill hits
 
-...I can create a gerber file for the outside outline of the shape, and then create an Excelon drill hits file for the 
+...I can create a gerber file for the outside outline of the shape, and then create an [Excelon drill hits file](https://en.wikipedia.org/wiki/Excellon_format) for the 
 round interior cut-outs!
 
 This turns out to be slightly tedious because there is no good way to replace a cutout with a matching hole. I have to manually measure the cutouts 
