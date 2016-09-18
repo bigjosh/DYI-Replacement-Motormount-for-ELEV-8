@@ -56,10 +56,10 @@ Now my laser cutter does not do DXF files, but I can import the DXF into...
 
 Saldy, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error so no joy on this path.
 
-This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things doneuse
-use monster CAD workstations running serious tools like...
+This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things done use
+use serious CAD workstations running serious tools like...
 
- ###Fusion 360 
+###Fusion 360 
 
 ...which is a free and nice desktop-based 3D cad program that can also import SolidWorks files.
 
@@ -69,7 +69,7 @@ Here is what I ended up with...
 
 http://a360.co/2clur11
 
-...and again exported as a DXF...
+...which I converted to a sketch (to 2D-ify it) and again exported as a DXF...
 
 [721-80304 - Face F360.dxf](721-80304 - Face F360.dxf)
 
@@ -77,7 +77,7 @@ http://a360.co/2clur11
 
 Hmmm... getting an SVG to send to the laser cutter is turning out to be a lot of work!
 
-Luckily anyone who is building custom drone hardware also likely has an...
+Thakns oodness I also have a very handy...
 
 ###Othermill PCB cutter
 
@@ -109,15 +109,15 @@ I am so close I can taste it! I quickly exported the board outline to a gerber f
 
 Hey! I have a gerber and I want a board, so I the rest is just ceremony- right?
 
-Wrong!!! Turns out that Otherplan can not even load my gerber file! It has not implemented the gerber "G85" command 
+Wrong!!! Turns out that Otherplan can not even load my gerber file! It [has not implemented the gerber "G85" command](https://othermachine.co/support/pcb/troubleshooting/) 
 which is used to describe internal cutouts. Boo Hoo (maybe someday OtherMill people? Please?).
 
-Luckily those internal cutouts happen to be exactly round circles so if can conver the cutouts to...
+Luckily those internal cutouts happen to be exactly round circles so if can convert the cutouts to...
 
 ###Drill hits
 
 I can create a gerber file for the outside outline of the shape, and then create an Excelon drill hits file for the 
-interior cut-outs!
+round interior cut-outs!
 
 This turns out to be slightly tedious becuase I have to manually measure the cutouts and then carfully center the drill
 hits in the middle of each cutout, but eventually I end up with this... 
@@ -135,6 +135,18 @@ hits in the middle of each cutout, but eventually I end up with this...
 ![Drill Hits.PNG](Drill Hits.PNG)
 
 [Through.drl](Through.drl)
+
+###Ready to Cut!
+
+![Ready to cut.PNG](Ready to cut.PNG)
+
+![Cut Parts.jpg](Cut Parts.jpg)
+
+
+###Oh happy day!
+
+![It Fits.jpg](It Fits.jpg)
+
 
 
 
