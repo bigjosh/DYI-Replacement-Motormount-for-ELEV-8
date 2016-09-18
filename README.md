@@ -9,11 +9,9 @@ I crashed my Parallax ELEV-8 drone (testing some stuff for Makerfaire NYC 2016!)
 
 The motormounts were smashed so I checked if I could...
 
-###Buy replacement motomounts directly from Parallax
+###[Buy replacement motomounts directly from Parallax](https://www.parallax.com/product/721-80304)
 
 ![721-80304.png](721-80304.png)
-
-https://www.parallax.com/product/721-80304
 
 Parallax sells exact replacement part for only $3 each. They are made from 0.093 inches thick black acetal.
 
@@ -36,7 +34,7 @@ This is the SolidWorks model...
 
 But SolidWorks is crazy expensive, so instead I imported the part into...
 
-###OnShape
+###[OnShape](https://www.onshape.com/)
 
 ...which is a free and pretty nice web-based 3D cad program that happens to be able to import SolidWorks files. 
 
@@ -54,7 +52,7 @@ I exported the face to a flat DXF R13 file...
 
 Unfortunately my laser cutter does not speak DXF, but I can import the DXF into...
 
-###Inkscape
+###[Inkscape](https://inkscape.org/en/)
 
 ...which is a free program that can import DXF and export the SVG files my laster cutter craves!
 
@@ -64,7 +62,7 @@ Sadly, Inkscape balked at the DXF (as often happens with DXF files) with a "POLY
 This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things done use
 use serious CAD workstations running serious tools like...
 
-###Fusion 360 
+###[Fusion 360 ](http://www.autodesk.com/products/fusion-360/overview)
 
 ...which is a free and nice desktop-based 3D cad program that can also import SolidWorks files.
 
@@ -86,7 +84,7 @@ Hmmm... getting an SVG to send to the laser cutter is turning out to be a lot of
 
 Thank goodness I also have a very handy...
 
-###Othermill PCB cutter
+###[Othermill PCB cutter](https://othermachine.co/)
 
 PCBs are sort of the right thickness and are probably strong enough, so if I can just make a PCB board that happens to 
 be exactly the same shape as a motormount... Hmmm... A hack to be sure, but it should (could?) work!
@@ -95,7 +93,7 @@ Sadly the newest version of the Othermill software can not directly import a DXF
 
 Luckily, I definitely can import DXF files into...
 
-###DipTrace PCB layout software
+###[DipTrace PCB layout software](http://www.diptrace.com/)
 
 ...which happy imported the DXF with ease! I specified to import the "visible" layer from the DXF into the "Board Outline" layer of the 
 board and ended up with a motormount shaped board!....
@@ -111,7 +109,7 @@ Those are the boards I've been looking for! I quickly exported the board outline
 
 ...and jogged over to mill to load the file into...
 
-###Otherplan
+###[Otherplan](https://othermachine.co/otherplan/)
 
 ...which is the software that reads in gerber files and actually cuts the boards on the Othermill.
 
