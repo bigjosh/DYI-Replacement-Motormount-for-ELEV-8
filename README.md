@@ -24,13 +24,13 @@ Luckily Parallax generously supplies files for all the parts in the ELEV-8!
 
 I have a laser cutter, and converting files into flat plastic shapes is exactly what laser cutters do! Whoo hoo, I'll have my motormount in no time!
 
-###Orginal file
+###Original file
 
 This is the SolidWorks model...
 
 [721-80304.SLDPRT](721-80304.SLDPRT)
 
-But SolidWorks is crazy expsensive, so instead I imported the part into...
+But SolidWorks is crazy expensive, so instead I imported the part into...
 
 ###OnShape
 
@@ -54,7 +54,7 @@ Now my laser cutter does not do DXF files, but I can import the DXF into...
 
 ...which is a free program that can import DXF and export the SVG files my laster cutter craves!
 
-Saldy, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error so no joy on this path.
+Sadly, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error so no joy on this path.
 
 This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things done use
 use serious CAD workstations running serious tools like...
@@ -77,16 +77,16 @@ http://a360.co/2clur11
 
 Hmmm... getting an SVG to send to the laser cutter is turning out to be a lot of work!
 
-Thakns oodness I also have a very handy...
+Thank goodness I also have a very handy...
 
 ###Othermill PCB cutter
 
 PCBs are sort of the right thickness and are probably strong enough, so if I can just make a PCB board that happens to 
 be exactly the same shape as a motormount... Hmmm... A hack to be sure, but it should work!
 
-Sadly the newest version of the Othermill software can not directly import a DXF file (maybe someday Othermill poeple? Please?).
+Sadly the newest version of the Othermill software can not directly import a DXF file (maybe someday Othermill people? Please?).
 
-Luckily, I definately can import DXF files into...
+Luckily, I definitely can import DXF files into...
 
 ###DipTrace PCB layout software
 
@@ -94,6 +94,7 @@ Luckily, I definately can import DXF files into...
 board and ended up with a motormount shaped board!....
 
 ![DipTrace Outline.PNG](DipTrace Outline.PNG)
+[Motormount Board Outline with drill hit holes.dip](Motormount Board Outline with drill hit holes.dip)
 
 I am so close I can taste it! I quickly exported the board outline to a gerber file...
 
@@ -119,7 +120,7 @@ Luckily those internal cutouts happen to be exactly round circles so if can conv
 I can create a gerber file for the outside outline of the shape, and then create an Excelon drill hits file for the 
 round interior cut-outs!
 
-This turns out to be slightly tedious becuase I have to manually measure the cutouts and then carfully center the drill
+This turns out to be slightly tedious because I have to manually measure the cutouts and then carefully center the drill
 hits in the middle of each cutout, but eventually I end up with this... 
 
 ![DipTrace Outline With Drill Hits.PNG](DipTrace Outline With Drill Hits.PNG)
@@ -146,24 +147,3 @@ hits in the middle of each cutout, but eventually I end up with this...
 ###Oh happy day!
 
 ![It Fits.jpg](It Fits.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###DipTrace file
-
-
-
-
-
-
