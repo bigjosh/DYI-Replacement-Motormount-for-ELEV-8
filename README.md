@@ -5,24 +5,28 @@ Files for making your own [replacement motor mounts for the Parallax ELEV-8 dron
 
 ![smashed mount](smashed.jpg)
 
-You've just crashed your Parallax ELEV-8 drone testing some new code. The motormounts are smashed so you check if you can...
+I crashed my Parallax ELEV-8 drone (testing some stuff for Makerfaire NYC 2016!). 
 
-###Buy replacements directly from Parallax
+The motormounts were smashed so I checked if I could...
+
+###Buy replacement motomounts directly from Parallax
 
 ![721-80304.png](721-80304.png)
 
 https://www.parallax.com/product/721-80304
 
-Parallax sells exact replacements for only $3 each. They are made from 0.093 inches thick black acetal.
+Parallax sells exact replacement part for only $3 each. They are made from 0.093 inches thick black acetal.
 
 Of course it is Friday night, so even 
-if you paid for overnight shipping, you are grounded at least for the next 5 days. So you decide to...
+if with an overnight shipping upgrade, I'd be grounded at least for the next 5 days. 
 
-###Make your own replacement motor mounts!
+Maker Faire is in 2 weeks, so that won't work. 
+
+###Make replacement motor mounts!
 
 Luckily Parallax generously supplies files for all the parts in the ELEV-8!
 
-I have a laser cutter, and converting files into flat plastic shapes is exactly what laser cutters do! Whoo hoo, I'll have my motormount in no time!
+I have a laser cutter, and converting bits into flat plastic shapes is exactly what laser cutters do best! Whoo hoo, I'll have my motormounts in no time!
 
 ###Original file
 
@@ -42,19 +46,20 @@ Here is what I ended up with...
 
 https://cad.onshape.com/documents/87f6dc6947cb4aeb3c7f5888/w/89525256ab03b4d9a79cea25/e/45e0d6c32f898424b1c1b571
 
-That looks familiar! I'll take 4 to go please!
+That looks familiar! I'll take 4 of those to go please!
 
-I exported the face to a flat R13 DXF file...
+I exported the face to a flat DXF R13 file...
 
 [721-80304 - Face.dxf](721-80304 - Face.dxf)
 
-Now my laser cutter does not do DXF files, but I can import the DXF into...
+Unfortunately my laser cutter does not speak DXF, but I can import the DXF into...
 
 ###Inkscape
 
 ...which is a free program that can import DXF and export the SVG files my laster cutter craves!
 
-Sadly, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error so no joy on this path.
+Sadly, Inkscape balked at the DXF (as often happens with DXF files) with a "POLYLINE encountered and ignored" error, so no joy on this path.
+
 
 This must be my punishment for trying to use a cutting-edge web-based CAD tool. Serious people who want to get things done use
 use serious CAD workstations running serious tools like...
@@ -69,7 +74,9 @@ Here is what I ended up with...
 
 http://a360.co/2clur11
 
-...which I converted to a sketch (to 2D-ify it) and again exported as a DXF...
+There are my motomounts again!
+
+I converted a face to a sketch (to 2D-ify it) and again exported the sketch as a DXF...
 
 [721-80304 - Face F360.dxf](721-80304 - Face F360.dxf)
 
@@ -82,7 +89,7 @@ Thank goodness I also have a very handy...
 ###Othermill PCB cutter
 
 PCBs are sort of the right thickness and are probably strong enough, so if I can just make a PCB board that happens to 
-be exactly the same shape as a motormount... Hmmm... A hack to be sure, but it should work!
+be exactly the same shape as a motormount... Hmmm... A hack to be sure, but it should (could?) work!
 
 Sadly the newest version of the Othermill software can not directly import a DXF file (maybe someday Othermill people? Please?).
 
@@ -96,7 +103,7 @@ board and ended up with a motormount shaped board!....
 ![DipTrace Outline.PNG](DipTrace Outline.PNG)
 [Motormount Board Outline with drill hit holes.dip](Motormount Board Outline with drill hit holes.dip)
 
-I am so close I can taste it! I quickly exported the board outline to a gerber file...
+Those are the boards I've been looking for! I quickly exported the board outline to a gerber file...
 
 ![gerber.png](gerber.png)
 
@@ -110,18 +117,18 @@ I am so close I can taste it! I quickly exported the board outline to a gerber f
 
 Hey! I have a gerber and I want a board, so I the rest is just ceremony- right?
 
-Wrong!!! Turns out that Otherplan can not even load my gerber file! It [has not implemented the gerber "G85" command](https://othermachine.co/support/pcb/troubleshooting/) 
+Turns out that Otherplan can not even load my gerber file! It [has not implemented the gerber "G85" command](https://othermachine.co/support/pcb/troubleshooting/) 
 which is used to describe internal cutouts. Boo Hoo (maybe someday OtherMill people? Please?).
 
 Luckily those internal cutouts happen to be exactly round circles so if can convert the cutouts to...
 
 ###Drill hits
 
-I can create a gerber file for the outside outline of the shape, and then create an Excelon drill hits file for the 
+...I can create a gerber file for the outside outline of the shape, and then create an Excelon drill hits file for the 
 round interior cut-outs!
 
-This turns out to be slightly tedious because I have to manually measure the cutouts and then carefully center the drill
-hits in the middle of each cutout, but eventually I end up with this... 
+This turns out to be slightly tedious because there is no good way to replace a cutout with a matching hole. I have to manually measure the cutouts 
+and then carefully manually place a drill hit in the center of each cutout, but eventually I end up with this... 
 
 ![DipTrace Outline With Drill Hits.PNG](DipTrace Outline With Drill Hits.PNG)
 
@@ -147,3 +154,5 @@ hits in the middle of each cutout, but eventually I end up with this...
 ###Oh happy day!
 
 ![It Fits.jpg](It Fits.jpg)
+
+(A few flights later, I can report that a stack of two 1.54mm FR1 PCBs work as a motor mount- at least for the placid maneuvers I am doing.)
