@@ -1,5 +1,5 @@
 # DYI-Replacement-Motormount-for-ELEV-8
-Files for making your own [replacement motor mounts for the Parallax ELEV-8 drone](https://www.parallax.com/product/721-80304)
+Files for making your own replacement motor mounts for the [Parallax ELEV-8 drone](https://www.parallax.com/product/elev-8)
 
 ###Crash!
 
